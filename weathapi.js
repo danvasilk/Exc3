@@ -6,7 +6,7 @@ function sendRequest(method, url) {
         xhr.open(method, url);
         xhr.onload = () => {
             if (xhr.status >= 400) {
-                reject((xhr.response))
+                reject(xhr.response)
             } else {
                 const a = JSON.parse(xhr.response);
                 const b = "Температура в городе: " + a.name
